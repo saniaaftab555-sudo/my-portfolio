@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sania Aftab — data analyst and freelancer. Explore dashboard, Python and analytics projects.">
+  <title>Sania Aftab | Data Analyst Portfolio</title>
+  <style>
+    :root{--bg:#f7f8fc;--ink:#18243a;--muted:#526079;--accent:#5b42d6;--line:#dfe3ee;--card:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.65}a{color:var(--accent)}button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid #d17b00;outline-offset:5px}
+    .container{width:min(1100px,90%);margin:auto}header{position:sticky;top:0;background:#fffffff2;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:20px}.brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:21px}.brand span{color:var(--accent)}nav{display:flex;gap:24px}nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:var(--accent)}.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 12px}
+    .hero{display:grid;grid-template-columns:1.25fr 1fr;gap:65px;align-items:center;padding:95px 0}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:bold;color:var(--accent)}h1{font-size:clamp(42px,6vw,68px);line-height:1.1;letter-spacing:-2px;margin:20px 0}h1 span{color:var(--accent)}.lead{color:var(--muted);font-size:18px;max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:white;padding:12px 22px;border-radius:9px;font-weight:bold;cursor:pointer}.btn.secondary{background:transparent;color:var(--accent)}.btn:hover{filter:brightness(.92)}[hidden]{display:none!important}#uae-github{margin-top:18px}.project-art{font-size:clamp(20px,3vw,30px)}
+    .visual{padding:28px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 60px #1b244512;transform:rotate(2deg)}.visual-title{display:flex;justify-content:space-between;align-items:center;font-weight:bold}.dot{width:9px;height:9px;background:#2d9b75;border-radius:50%;display:inline-block}.visual p{font-size:13px;color:var(--muted)}.bars{display:flex;align-items:flex-end;gap:14px;height:160px;padding:20px 4px 0;border-bottom:1px solid var(--line)}.bars i{display:block;flex:1;background:#bcb0f5;border-radius:7px 7px 0 0}.bars i:nth-child(even){background:var(--accent)}.visual-foot{display:flex;justify-content:space-between;padding-top:15px;font-size:12px;color:var(--muted)}
+    section{padding:65px 0;border-top:1px solid var(--line)}h2{font-size:34px;letter-spacing:-1px;margin:8px 0 14px}h3{font-size:21px;line-height:1.3;margin:12px 0}.intro{color:var(--muted);max-width:680px}.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:50px}.fact{padding:16px 0;border-bottom:1px solid var(--line)}.fact strong{display:block}.fact span{color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}.tag{background:#eeeafa;color:#4934a4;padding:6px 13px;border-radius:99px;font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:25px;display:flex;flex-direction:column}.card p{font-size:15px;color:var(--muted)}.project-art{height:120px;background:#eeeafa;border-radius:9px;padding:20px;display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--accent);font-weight:bold}.card .tags{margin:10px 0}.card .tags .tag{font-size:11px;padding:4px 9px}.card details{margin-top:auto;font-size:14px}.card summary{cursor:pointer;color:var(--accent);font-weight:bold}.card details p{font-size:14px}.number{color:var(--accent);font-size:14px;font-weight:bold}.contact{background:#201942;color:#fff;padding:38px;border-radius:18px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact h2{color:#fff}.contact p{color:#d1cbea}.contact label{display:block;font-size:14px;margin-bottom:8px}.contact input{width:100%;border:1px solid #8b7daf;border-radius:8px;padding:12px;background:#fff;color:var(--ink);font:inherit}.contact button{margin-top:12px}.note{font-size:12px!important}.status{min-height:24px;font-size:14px}footer{padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:60px 0;gap:35px}.visual{max-width:480px;transform:none}.grid{grid-template-columns:1fr}.about-grid,.contact{grid-template-columns:1fr;gap:24px}.menu{display:block}nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;gap:16px}nav.open{display:flex}section{padding:45px 0}.contact{padding:25px}h2{font-size:29px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+    /* Refreshed portfolio design */
+    :root{--bg:#0c1323;--ink:#edf2ff;--muted:#afbdd4;--accent:#a99aff;--line:#29354b;--card:#151f33}
+    body{background:radial-gradient(ellipse at 80% 0%,#292044 0,transparent 42%),var(--bg)}
+    header{background:#0c1323ed}.brand{letter-spacing:-1px}.btn{background:#a99aff;color:#11182b;border-color:#a99aff;box-shadow:0 5px 20px #a99aff15}.btn.secondary{color:#d3caff}.hero{padding:105px 0}.eyebrow{color:#c5baff}h1{letter-spacing:-3px}.visual{background:linear-gradient(145deg,#202a43,#151e31);border-color:#46516b;box-shadow:0 24px 70px #0005}.bars i{background:#71699d}.visual-title{color:#edf2ff}.tag{background:#30294b;color:#d4caff}.card{background:linear-gradient(140deg,#1c2840,#121c2e);box-shadow:0 12px 30px #0002;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-5px);border-color:#9382d3}.project-art{background:linear-gradient(135deg,#3b3262,#223b53);color:#ded6ff;font-size:25px;letter-spacing:1px}.contact{background:linear-gradient(120deg,#30254e,#192b42);border:1px solid #4c4263}nav.open{background:#121c2e}.resume-panel{background:linear-gradient(120deg,#1c2940,#25213c);border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}.resume-panel label{display:block;font-weight:bold;margin-bottom:12px}.resume-panel input{max-width:100%;color:var(--muted)}.resume-panel input::file-selector-button{background:#a99aff;color:#11182b;border:0;padding:10px 14px;border-radius:8px;margin-right:10px;font-weight:bold;cursor:pointer}.resume-panel .note{color:var(--muted)}.resume-status{min-height:24px;color:#d3caff}.resume-panel button{padding:8px 14px;margin-top:12px}.resume-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.resume-name{overflow-wrap:anywhere}.resume-panel h2{margin-top:0}
+    @media(max-width:800px){.resume-panel{grid-template-columns:1fr;padding:24px}.hero{padding:65px 0}}
+    @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <!-- EDITING GUIDE: All CSS and JavaScript are included in this file.
+       Replace project descriptions with verified details before publishing.
+       Add your own GitHub, LinkedIn and Fiverr links where appropriate.
+       Enter your professional email in the OWNER_EMAIL setting below. -->
+  <header><div class="container nav"><a class="brand" href="#home">Sania<span>.</span></a><button class="menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div></header>
+  <main>
+    <div class="container hero" id="home"><div><div class="eyebrow">Data analyst · Open to opportunities</div><h1>Hi, I'm Sania.<br><span>I make data<br>make sense.</span></h1><p class="lead">BCA graduate with hands-on project experience in SQL, Python, Excel, and Power BI. I turn data into clear dashboards and useful business insights, and I am seeking entry-level data analyst opportunities.</p><div class="actions"><a class="btn" href="#projects">Explore my projects ↗</a><a class="btn secondary" href="#contact">Contact me</a><a class="btn secondary" href="#resume">My resume ↓</a></div></div><div class="visual" role="img" aria-label="Decorative analytics illustration with six bars; illustrative, not project results"><div class="visual-title">From data to decisions <span class="dot"></span></div><p>Clean. Analyze. Visualize.</p><div class="bars"><i style="height:35%"></i><i style="height:65%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:67%"></i><i style="height:100%"></i></div><div class="visual-foot"><span>Illustrative chart</span><span>Clarity through analytics</span></div></div></div>
+    <section id="about"><div class="container about-grid"><div><div class="eyebrow">A little about me</div><h2>Curious about data.<br>Focused on useful answers.</h2><p class="intro">I'm Sania Aftab, a Bachelor of Computer Applications graduate from Rourkela, Odisha, India. I enjoy working with data, designing dashboards, and communicating insights in a way people can understand.</p><p class="intro">My portfolio brings together analytics and Python projects. As a freelancer, I help turn datasets into organized reports and visual stories.</p></div><div><div class="fact"><strong>Education</strong><span>BCA · Rourkela Institute of Management and Studies</span></div><div class="fact"><strong>Focus</strong><span>Data analysis, dashboards, and reporting</span></div><div class="fact"><strong>Based in</strong><span>Rourkela, Odisha, India</span></div></div></div></section>
+    <section id="skills"><div class="container"><div class="eyebrow">My toolkit</div><h2>Skills & tools</h2><p class="intro">Tools I use across my analytics and programming projects.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Git & GitHub</span></div></div></section>
+    <section id="projects"><div class="container"><div class="eyebrow">Selected work</div><h2>Projects that tell a story</h2><p class="intro">Explore my retail, dashboard, and machine learning projects. Expand each card for more detail.</p><div class="grid">
+      <article class="card"><div class="project-art" aria-hidden="true">UAE / RETAIL</div><h3>UAE Retail Store</h3><p>My recent UAE Retail Store project.</p><div class="tags"><span class="tag">Retail project</span><span class="tag">Recent work</span></div><details><summary>Project overview</summary><p>Explore the project files and documentation in the GitHub repository. Project details and screenshots will be added here.</p><!-- Add verified tools, dataset details and findings here. --></details><a id="uae-github" class="btn secondary" hidden target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></article>
+      <article class="card"><div class="project-art" aria-hidden="true">01 / SALES</div><h3>Myntra Sales Dashboard</h3><p>A sales dashboard built to make retail data easier to explore and understand.</p><div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span></div><details><summary>Project overview</summary><p>Prepared the dataset in Excel and created visualizations in Power BI. The project focuses on presenting sales information in an accessible dashboard format.</p><!-- Add your dashboard screenshot here. --></details><a class="btn secondary" style="margin-top:18px" href="https://github.com/saniaaftab555-sudo/Myntra-Sales-Dashboard" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></article>
+      <article class="card"><div class="project-art" aria-hidden="true">02 / HEALTH</div><h3>Mental Healthcare Analysis</h3><p>A dashboard project exploring a mental healthcare dataset through visual analysis.</p><div class="tags"><span class="tag">Data analysis</span><span class="tag">Visualization</span></div><details><summary>Project overview</summary><p>A visual exploration of mental healthcare data. Add your exact data source, indicators, findings, and dashboard screenshots here before publishing.</p></details><a class="btn secondary" style="margin-top:18px" href="https://github.com/saniaaftab555-sudo/Mental-Healthcare" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></article>
+      <article class="card"><div class="project-art" aria-hidden="true">SALES / ML</div><h3>Sales Prediction</h3><p>A Python machine learning project focused on sales prediction, completed as part of my CodSoft data science internship.</p><div class="tags"><span class="tag">Python</span><span class="tag">Machine learning</span><span class="tag">Sales prediction</span></div><details><summary>Project overview</summary><p>Explore the project code and documentation in the GitHub repository. Add the dataset source, prediction approach, and verified evaluation results here.</p></details><a class="btn secondary" style="margin-top:18px" href="https://github.com/saniaaftab555-sudo/Sales-Prediction" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></article>
+    </div></div></section>
+    <section id="services"><div class="container"><div class="eyebrow">How I can help</div><h2>Freelance services</h2><div class="grid"><article class="card"><span class="number">01</span><h3>Data cleaning</h3><p>Organize spreadsheets, address missing values and duplicates, and prepare data for analysis.</p></article><article class="card"><span class="number">02</span><h3>Dashboard design</h3><p>Create clear Excel and Power BI dashboards around your reporting needs.</p></article><article class="card"><span class="number">03</span><h3>Analysis & reporting</h3><p>Explore your data with SQL and Python and present findings in an understandable report.</p></article></div></div></section>
+    <section id="resume"><div class="container resume-panel"><div><div class="eyebrow">Career profile</div><h2>My resume</h2><p class="intro">Explore my education, skills, and project experience.</p><div class="resume-actions"><a id="resume-download" class="btn" hidden download="Sania_Aftab_Resume.pdf">Download resume ↓</a></div><p id="resume-name" class="resume-name note"></p></div><div><label for="resume-upload">Add or replace your resume</label><input type="file" id="resume-upload" accept="application/pdf,.pdf"><p class="note">Choose a PDF up to 5 MB. It is stored only in this browser. For a published website, upload your PDF with the website files and set RESUME_URL in the code.</p><button type="button" id="resume-remove" class="btn secondary" hidden>Remove local resume</button><p id="resume-status" class="resume-status" role="status"></p></div></div></section>
+    <section id="contact"><div class="container contact"><div><div class="eyebrow" style="color:#bfb0ff">Hiring a data analyst?</div><h2>Let's connect.</h2><p>I welcome conversations about entry-level data analyst roles, internships, and freelance analytics projects.</p><p class="note"><a href="mailto:saniaaftab555@gmail.com" style="color:#d1cbea">saniaaftab555@gmail.com</a></p></div><form id="contact-form"><label for="message">Your message</label><input id="message" name="message" placeholder="I would like to discuss an opportunity…" required maxlength="1500"><button class="btn" type="submit">Open email draft ↗</button><p class="note">Opens your email app. Send the draft there to deliver your enquiry.</p><p id="status" class="status" role="status"></p></form></div></section>
+  </main>
+  <footer>© <span id="year"></span> Sania Aftab · Built with HTML, CSS & JavaScript</footer>
+  <script>
+    // Replace the empty string with your professional email before publishing.
+    const OWNER_EMAIL = 'saniaaftab555@gmail.com';
+    // Paste your UAE Retail Store repository URL between the quotes.
+    const UAE_RETAIL_GITHUB_URL = 'https://github.com/saniaaftab555-sudo/UAE-Retail-Store';
+    if (UAE_RETAIL_GITHUB_URL) {
+      try {
+        const url = new URL(UAE_RETAIL_GITHUB_URL);
+        if (url.protocol === 'https:' && url.hostname === 'github.com') {
+          const link = document.querySelector('#uae-github');
+          link.href = url.href;
+          link.hidden = false;
+        }
+      } catch (error) { console.warn('Enter a valid GitHub repository URL.'); }
+    }
+
+    // For a public website, place your PDF alongside index.html and enter its filename.
+    // Example: const RESUME_URL = 'Sania_Aftab_Resume.pdf';
+    const RESUME_URL = '';
+    const resumeInput = document.querySelector('#resume-upload');
+    const resumeLink = document.querySelector('#resume-download');
+    const resumeName = document.querySelector('#resume-name');
+    const resumeStatus = document.querySelector('#resume-status');
+    const removeResume = document.querySelector('#resume-remove');
+    let resumeObjectURL;
+    function showResume(blob, name) {
+      if (resumeObjectURL) URL.revokeObjectURL(resumeObjectURL);
+      resumeObjectURL = URL.createObjectURL(blob);
+      resumeLink.href = resumeObjectURL;
+      resumeLink.download = name;
+      resumeLink.hidden = false;
+      resumeName.textContent = name;
+      removeResume.hidden = false;
+    }
+    function showHostedResume() {
+      if (resumeObjectURL) URL.revokeObjectURL(resumeObjectURL);
+      resumeObjectURL = undefined;
+      resumeLink.hidden = !RESUME_URL;
+      if (RESUME_URL) resumeLink.href = RESUME_URL;
+      else resumeLink.removeAttribute('href');
+      resumeLink.download = 'Sania_Aftab_Resume.pdf';
+      resumeName.textContent = '';
+      removeResume.hidden = true;
+    }
+    const database = new Promise((resolve, reject) => {
+      const request = indexedDB.open('sania-portfolio', 1);
+      request.onupgradeneeded = () => request.result.createObjectStore('files');
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    database.catch(() => {});
+    async function storedResume(action, value) {
+      const db = await database;
+      return new Promise((resolve, reject) => {
+        const transaction = db.transaction('files', action === 'get' ? 'readonly' : 'readwrite');
+        const store = transaction.objectStore('files');
+        const request = action === 'get' ? store.get('resume') : action === 'put' ? store.put(value, 'resume') : store.delete('resume');
+        transaction.oncomplete = () => resolve(request.result);
+        transaction.onerror = () => reject(transaction.error);
+        transaction.onabort = () => reject(transaction.error);
+      });
+    }
+    const resumeReady = (async () => {
+      showHostedResume();
+      try {
+        const saved = await storedResume('get');
+        if (saved && saved.blob) showResume(saved.blob, saved.name);
+      } catch (error) { resumeStatus.textContent = 'Browser storage is unavailable. You can still select a PDF for this visit.'; }
+    })();
+    resumeInput.addEventListener('change', async () => {
+      await resumeReady;
+      const file = resumeInput.files[0];
+      if (!file) return;
+      if (!/\.pdf$/i.test(file.name) || file.size > 5 * 1024 * 1024) {
+        resumeStatus.textContent = 'Please choose a PDF no larger than 5 MB.';
+        resumeInput.value = ''; return;
+      }
+      const signature = new TextDecoder().decode(await file.slice(0, 5).arrayBuffer());
+      if (signature !== '%PDF-') {
+        resumeStatus.textContent = 'This file does not appear to be a PDF.';
+        resumeInput.value = ''; return;
+      }
+      showResume(file, file.name);
+      try {
+        await storedResume('put', { blob: file, name: file.name });
+        resumeStatus.textContent = 'Resume saved in this browser. The download button is ready.';
+      } catch (error) { resumeStatus.textContent = 'Resume ready for this visit. Browser storage could not save it.'; }
+      resumeInput.value = '';
+    });
+    removeResume.addEventListener('click', async () => {
+      await resumeReady;
+      try {
+        await storedResume('delete');
+        showHostedResume();
+        resumeStatus.textContent = 'Local resume removed.';
+      } catch (error) { resumeStatus.textContent = 'Could not remove the saved resume. Please try again.'; }
+    });
+
+    const menu = document.querySelector('.menu');
+    const navigation = document.querySelector('#navigation');
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(open));
+      navigation.classList.toggle('open', open);
+    });
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.setAttribute('aria-expanded', 'false');
+      navigation.classList.remove('open');
+    }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navigation.classList.contains('open')) {
+        navigation.classList.remove('open');
+        menu.setAttribute('aria-expanded', 'false');
+        menu.focus();
+      }
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    document.querySelector('#contact-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const status = document.querySelector('#status');
+      if (!OWNER_EMAIL) {
+        status.textContent = 'Contact is awaiting setup. Website owner: add your email to OWNER_EMAIL in the code.';
+        return;
+      }
+      const message = document.querySelector('#message').value.trim();
+      if (!message) { status.textContent = 'Please enter a short project description.'; return; }
+      window.location.href = 'mailto:' + encodeURIComponent(OWNER_EMAIL) + '?subject=' + encodeURIComponent('Portfolio project enquiry') + '&body=' + encodeURIComponent(message);
+      status.textContent = 'Email draft requested. Please send it using your email app.';
+    });
+  </script>
+</body>
+</html>
